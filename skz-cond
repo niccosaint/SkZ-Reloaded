@@ -432,6 +432,7 @@ on rightclick:
 			wait 5 minutes
 			set event-block to crafting table, normal chest, trapped chest or ender chest
 		if event-block is an ender chest:
+			# Narazie nic tu nie ma. Jesli chcesz cos tu dodac, wpisz sobie.
 			set event-block to air
 			wait 5 minutes
 			set event-block to crafting table, normal chest, trapped chest or ender chest
