@@ -155,21 +155,6 @@ command /skzadmin [<text>] [<player>] [<text>] [<number>]:
 						give 1 water bottle named "&bCzysta woda" to arg 2
 						give 1 paper named "&f&lBandaz" to arg 2
 						give 3 bread to arg 2
-					else if arg 3 is "lemur":
-						give 1 leather chestplate coloured green with lore "&ePolatany||&c90%% Ochrony" to arg 2
-						give 5 wooden buttons named "&6Miedziak" with lore "||&7Wartosc: 1c" to arg 2
-						give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to arg 2
-						give 1 water bottle named "&bCzysta woda" to arg 2
-						give 1 paper named "&f&lBandaz" to arg 2
-						give 3 bread to arg 2
-					else if arg 3 is "kret":
-						give 1 wooden sword with lore "&6Zlamany||&c70%% Obrazen" to arg 2
-						give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to arg 2
-						give 1 leather chestplate coloured black with lore "&ePolatany||&c90%% Ochrony" to arg 2
-						give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to arg 2
-						give 1 water bottle named "&bCzysta woda" to arg 2
-						give 1 paper named "&f&lBandaz" to arg 2
-						give 3 bread to arg 2
 					else if arg 3 is "vip":
 						give 1 stone sword named "&eVIP" with lore "&6Zlamany||&c70%% Obrazen" to arg 2
 						give 1 iron pressure plate named "&7Cwiartka" with lore "||&7Wartosc: 25c" to arg 2
@@ -191,30 +176,21 @@ command /skzadmin [<text>] [<player>] [<text>] [<number>]:
 
 command /skzkit:
 	trigger:
-		if player has permission "skz.lemur":
-			if player has permission "skz.kret":
-				if player has permission "skz.vip":
-					if player has permission "skz.svip":
-						give 1 iron sword named "&eSuperVIP" with lore "&6Zlamany||&c70%% Obrazen" to player
-						give 1 iron pressure plate named "&7Cwiartka" with lore "||&7Wartosc: 25c" to player
-						give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to player
-						give 5 wooden buttons named "&6Miedziak" with lore "||&7Wartosc: 1c" to player
-						give 1 leather chestplate named "&eSuperVIP" coloured gray with lore "&7Normalny||&7100%% Ochrony" to player
-					else:
-						give 1 stone sword named "&eVIP" with lore "&6Zlamany||&c70%% Obrazen" to player
-						give 1 iron pressure plate named "&7Cwiartka" with lore "||&7Wartosc: 25c" to player
-						give 1 leather chestplate named "&eVIP" coloured gray with lore "&7Normalny||&7100%% Ochrony" to player
-				else:
-					give 1 wooden sword with lore "&6Zlamany||&c70%% Obrazen" to player
-					give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to player
-					give 1 leather chestplate coloured black with lore "&ePolatany||&c90%% Ochrony" to player
-			else:
-				give 1 leather chestplate coloured green with lore "&ePolatany||&c90%% Ochrony" to player
+		if player has permission "skz.vip":
+			if player has permission "skz.svip":
+				give 1 iron sword named "&eSuperVIP" with lore "&6Zlamany||&c70%% Obrazen" to player
+				give 1 iron pressure plate named "&7Cwiartka" with lore "||&7Wartosc: 25c" to player
+				give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to player
 				give 5 wooden buttons named "&6Miedziak" with lore "||&7Wartosc: 1c" to player
-				give 1 wooden sword with lore "&6Zlamany||&c70%% Obrazen" to player
+				give 1 leather chestplate named "&eSuperVIP" coloured gray with lore "&7Normalny||&7100%% Ochrony" to player
+			else:
+				give 1 stone sword named "&eVIP" with lore "&6Zlamany||&c70%% Obrazen" to player
+				give 1 iron pressure plate named "&7Cwiartka" with lore "||&7Wartosc: 25c" to player
+				give 1 leather chestplate named "&eVIP" coloured gray with lore "&7Normalny||&7100%% Ochrony" to player
 		else:
-			give 1 leather chestplate with lore "&ePolatany||&c90%% Ochrony" to player
 			give 1 wooden sword with lore "&6Zlamany||&c70%% Obrazen" to player
+			give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to player
+			give 1 leather chestplate coloured black with lore "&ePolatany||&c90%% Ochrony" to player
 		give 1 stone button named "&8Dziesiatka" with lore "||&7Wartosc: 10c" to player
 		give 1 water bottle named "&bCzysta woda" to player
 		give 1 paper named "&f&lBandaz" to player
