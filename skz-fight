@@ -132,6 +132,19 @@ on damage:
 				chance of 5%:
 					set {_D} to {_D}*2
 					set action bar of attacker to "&4&lCRIT!"
+				# Pozycja ofiary
+				set {_vh} to y-coordinates of victim
+				set {_vb} to y-coordinates of victim rounded down
+				set {_vp} to {_vh} - {_vb}
+				if {_vp} >= 0.9:
+					set {_D} to {_D}*2
+					set action bar of attacker to "&4&lTrafienie w glowe!"
+					add 70 to {skz::%victim's uuid%::data::shock}
+				else:
+					if {_vp} > 0.45:
+						set {skz::%victim's uuid%::status::bleed} to random integer between 5 and 13
+					else:
+						apply slow to victim for 3 seconds
 				# Wyliczanie obrazen na podstawie jakosci broni
 				if lore of attacker's tool is "&4Zdewastowany||&c30%% Obrazen":
 					set {_DM} to 0.3
