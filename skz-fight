@@ -122,26 +122,10 @@ on damage:
 					set {_D} to 16
 				else if attacker's tool is diamond sword:
 					set {_D} to 24
-				else if attacker's tool is feather named "&7Bagnet «×»":
-					set {_D} to 20
 				else if attacker's tool is air:
 					set {_D} to 5
 				else if attacker's tool is bow:
 					set {_D} to 40
-				else if name of attacker's tool contains "AK-47":
-					set {_D} to 40
-				else if name of attacker's tool contains "Obrzyn":
-					set {_D} to 50
-				else if name of attacker's tool contains "Desert Eagle" or "Rewolwer":
-					set {_D} to 45
-				else if name of attacker's tool contains "Famas":
-					set {_D} to 35
-				else if name of attacker's tool contains "Dual Barettas" or "Negev" or "XM1014" or "M249":
-					set {_D} to 30
-				else if name of attacker's tool contains "AWP":
-					set {_D} to 90
-				else if name of attacker's tool contains "SCAR-20":
-					set {_D} to 60
 				else:
 					set {_D} to damage*10
 				# Ciosy krytyczne
