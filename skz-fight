@@ -134,7 +134,7 @@ on damage:
 					set action bar of attacker to "&4&lCRIT!"
 				# Pozycja ofiary
 				set {_vh} to y-coordinates of victim
-				set {_vb} to y-coordinates of victim rounded down
+				set {_vb} to rounded down y-coordinates of victim
 				set {_vp} to {_vh} - {_vb}
 				if {_vp} >= 0.9:
 					set {_D} to {_D}*2
